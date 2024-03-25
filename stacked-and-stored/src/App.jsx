@@ -21,11 +21,24 @@ function App() {
 
   return (
     <>
-    <NextUIProvider>
-      <Navbar windowWidth={windowWidth}/>
-      <Outlet windowWidth={windowWidth}/>
-      <Footer windowWidth={windowWidth}/>
-    </NextUIProvider>
+    {windowWidth > 800 ? 
+    (
+      <>
+      <div className="w-full flex flex-col justify-center">
+        <Navbar windowWidth={windowWidth}/>
+        <Outlet />
+        <Footer windowWidth={windowWidth}/>
+      </div>
+      </>
+    ) : (
+      <>
+      <div className="w-full">
+        <Navbar windowWidth={windowWidth}/>
+        <Outlet />
+        <Footer windowWidth={windowWidth}/>
+      </div>
+      </>
+    )}
     </>
   )
 }

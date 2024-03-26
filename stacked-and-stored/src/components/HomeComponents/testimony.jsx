@@ -2,7 +2,7 @@ export const Testimony = ({ windowWidth }) => {
 
     return (
         <>
-        <div className="border-2 h-screen w-full flex justify-center items-center relative mb-5">
+        <div className="border-2 border-black h-screen w-full flex justify-center items-center relative mb-5">
         {windowWidth > 800 ? (
             <>
             {/* <div className=" border-2 border-black mt-5 w-full h-full flex justify-end items-center relative"> */}

@@ -8,7 +8,7 @@ export const Navbar = ({ windowWidth }) => {
     return (
         <>
         {windowWidth > 800 ? (
-        <nav className="w-full border-2 border-black flex bg-white justify-evenly items-center py-1.5 fixed top-0 z-40 pt-3.5">
+        <nav className="w-full flex bg-white justify-evenly items-center py-1.5 fixed top-0 z-40 pt-3.5">
             <div className="border-2 w-11/12 flex justify-evenly items-center">
             <Link to="/about" className="border-2 w-20 h-10 flex items-center justify-center">About</Link>
             <Link to="services" className="border-2 w-20 h-10 flex items-center justify-center">Services</Link>

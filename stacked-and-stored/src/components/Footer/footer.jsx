@@ -5,7 +5,7 @@ export const Footer = ({ windowWidth }) => {
         <>
         <div className="border-2 border-black w-full flex flex-col mt-5">
             <div className="border-2 border-black flex flex-col justify-center items-center">
-                    {windowWidth < 800 ? 
+                    {windowWidth < 900 ? 
                     
                     (<>
                     <div className="flex justify-center items-center h-24 w-11/12">

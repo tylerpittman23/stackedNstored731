@@ -20,7 +20,7 @@ export const Home = () => {
         {windowWidth > 800 ? 
             (
                 <>
-                <div className="border-2 mt-48 flex flex-col justify-center items-center">
+                <div className="border-2 flex flex-col justify-center items-center">
                     <HeroSlides windowWidth={windowWidth}/>
                     <Welcome windowWidth={windowWidth}/>
                     <Testimony windowWidth={windowWidth}/>
@@ -28,7 +28,7 @@ export const Home = () => {
                 </>
             ) : (
                 <>
-                <div className="border-2 mt-48 flex items-center justify-center flex-col">
+                <div className="border-2 flex items-center justify-center flex-col">
                     <HeroSlides windowWidth={windowWidth}/>
                     <Welcome windowWidth={windowWidth}/>
                     <Testimony windowWidth={windowWidth}/>

@@ -30,13 +30,13 @@ const posts = [
 ]
 
 export const Footer = ({ windowWidth }) => {
-    const isWideScreen = windowWidth >= 900;
-    const followClass = `border-2 border-black w-full h-16 text-${isWideScreen ? '3xl' : 'xl'} flex justify-center items-center`;
+    const isWideScreen = windowWidth >= 800;
+    const followClass = `w-full h-16 text-${isWideScreen ? '3xl' : 'xl mt-10 mb-10'} flex justify-center items-center`;
 
     return (
-        <div className="bg-gray-100 w-full flex flex-col mt-5 items-center">
+        <div className="bg-gray-100 w-full flex flex-col items-center">
             <div className={followClass}>
-                <span>follow me @INSTAGRAM</span>
+                <h1 className="text-3xl">follow me @INSTAGRAM</h1>
             </div>
             <div className="w-full">
                 {isWideScreen ? (

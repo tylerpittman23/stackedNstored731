@@ -1,35 +1,37 @@
-export const AboutValue = ({ windowWidth }) => {
+export const AboutValue = ({ windowWidth, data }) => {
+
     return (
         <>
-        {windowWidth > 800 ? 
+        {windowWidth > 900 ? 
         (
             <>
-            <div className="border-2 border-black w-full h-screen flex justify-evenly items-center">
-                <div className="border-2 border-black bg-gray-200 w-full h-3/5 flex justify-evenly items-center">
-                    <div className="border-2 bg-white border-red-400 h-3/5 w-1/4"></div>
-                    <div className="border-2 bg-white border-red-400 h-3/5 w-1/4"></div>
-                    <div className="border-2 bg-white border-red-400 h-3/5 w-1/4"></div>
+            <div className="w-full h-screen flex justify-evenly items-center">
+                <div className="bg-gray-200 w-full h-3/5 flex justify-evenly items-center">
+                    {data.map(value => {
+                        return(
+                            <div key={value.id} className="border-2 bg-white rounded-md shadow-sm h-2/3 w-1/4 flex flex-col justify-evenly items-center px-5">
+                                <h1 className="text-3xl">{value.title}</h1>
+                                <p className="text-center">{value.content}</p>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
             
             </>
         ) : (
             <>
-            <div className="border-2 border-black bg-gray-200 w-full h-screen flex flex-col justify-evenly items-center relative">
-                {windowWidth > 600 ? 
-                (
-                    <>
-                    <div className="border-2 border-red-400 bg-white h-64 w-72 absolute left-10 top-10"></div>    
-                    <div className="border-2 border-red-400 bg-white h-64 w-72 absolute right-10"></div>    
-                    <div className="border-2 border-red-400 bg-white h-64 w-72 absolute left-10 bottom-10"></div> 
-                    </>
-                ) : (
-                    <>
-                    <div className="border-2 border-red-400 bg-white h-64 w-72"></div>    
-                    <div className="border-2 border-red-400 bg-white h-64 w-72"></div>    
-                    <div className="border-2 border-red-400 bg-white h-64 w-72"></div> 
-                    </>
-                )}   
+            <div className="bg-gray-200 w-full h-screen flex flex-col justify-evenly items-center relative">
+                {data.map(value => {
+                    return(
+                        <div key={value.id} className="h-1/3 w-11/12 flex flex-col justify-evenly items-center">
+                            <div className="card relative shadow-md bg-gray-100 w-full h-5/6 flex flex-col justify-evenly items-center px-5">
+                                <h1 className="text-3xl">{value.title}</h1>
+                                <p className="text-center">{value.content}</p>
+                            </div>
+                        </div>
+                    )
+                })}   
             </div> 
             </>
         )}     

@@ -70,31 +70,34 @@ export const HeroSlides = ({ windowWidth }) => {
     };
 
     const isWideScreen = windowWidth > 800;
-    const slideWidthClass = windowWidth > 1200 ? "w-1/2" : "w-8/12";
+    const slideWidthClass = windowWidth > 1200 ? "w-3/5" : "w-8/12";
 
     return (
-        <div className="h-screen flex flex-col justify-center items-center w-full pt-36">
-            <div className={`${isWideScreen ? slideWidthClass : "w-10/12"} bg-gray-400 h-3/4 flex justify-between items-center px-2`} style={backgroundStyle}>
+        <div className="h-screen bg-gray-100 flex flex-col justify-center items-center w-full pt-64">
+            <div className={`${isWideScreen ? slideWidthClass : "w-10/12"} bg-gray-400 rounded-sm h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
+                <div className="rounded-md bg-gray-300 absolute bottom-6 h-16 w-40 flex flex-col items-center justify-center">
+                    <h1 className="text-lg text-center text-white">Contact me for an estimate</h1>
+                </div>
                 <div 
-                    className={`${isWideScreen ? ('-translate-x-16') : ('')} border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    className={`${isWideScreen ? ('-left-16') : ('left-6')} absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
                     onClick={() => handleClick('left')}
                     aria-label="Previous Slide"
                 >
-                    <FontAwesomeIcon icon={faChevronLeft} />
+                    <FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/>
                 </div>
                 <div 
-                    className={`${isWideScreen ? ('translate-x-16') : ('')} border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    className={`${isWideScreen ? ('-right-16') : ('right-6')} absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
                     onClick={() => handleClick('right')}
                     aria-label="Next Slide"
                 >
-                    <FontAwesomeIcon icon={faChevronRight} />
+                    <FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/>
                 </div>
             </div>
-            <div className="w-28 flex justify-evenly items-center mt-1">
+            <div className="w-48 flex justify-evenly items-center mt-5">
                 {heroImages.map((image, index) => (
                     <span 
                         key={index} 
-                        className={`w-2 h-2 rounded-full ${index === currentImgIndex ? "bg-gray-200" : ""}`}
+                        className={`border-1 border-gray-300 w-2.5 h-2.5 rounded-full ${index === currentImgIndex ? "bg-gray-300" : ""}`}
                     ></span>
                 ))}
             </div>

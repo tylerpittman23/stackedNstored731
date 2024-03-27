@@ -8,7 +8,7 @@ const testimonies = [
     {
         name: 'Tyler Pittman',
         title: 'Life-Changing!',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        content: "Stacked and Stored really brought peace and order to my home. I am pretty organized but Joann brought my spaces to a new level of order. I never knew my closets and drawers had so much space! She even organized my garage and hung amazing shelves that would hold hundreds of pounds of items! I had her out for almost every room in my house. I love how she labels containers! Joann hauls unusable things to the dump, and she carries usable items to a charity store. I highly recommend that you have Joann out to organize a space or two. It’s contagious though. You won’t want to stop until the entire house is stacked and sorted!",
         src: testIMG1,
     },
     {
@@ -69,43 +69,43 @@ export const Testimony = ({ windowWidth }) => {
     // display testimony details in the container
 
     return (
-        <div className="h-screen w-full flex justify-center items-center mb-5">
+        <div className="h-screen w-full bg-gray-100 flex justify-center items-center">
             {isWideScreen ? (
                 <>
-                    <div className="bg-gray-200 w-full h-56"></div>
-                    <div className=" bg-gray-400 w-2/5 absolute h-3/5 right-6" style={backgroundStyle}></div>
-                    <div className="border-2 border-green-400 bg-white w-1/2 h-96 absolute left-8 flex flex-col justify-center items-center">
+                    <div className="bg-gray-100 w-2/3 h-52"></div>
+                    <div className=" bg-gray-400 w-2/5 shadow-lg absolute h-3/5 right-6" style={backgroundStyle}></div>
+                    <div className="card2 shadow-md w-1/2 h-96 absolute left-8 flex flex-col justify-center items-center">
                         <div className="w-full h-full flex justify-center items-center">
                             <div className="w-5/6 h-5/6 flex flex-col items-center justify-evenly">
                                 <h1 className="text-3xl">{testimonies[currentTestimony].title}</h1>
                                 <p className="text-center text-sm">{testimonies[currentTestimony].content}</p>
                                 <h2> -{testimonies[currentTestimony].name}</h2>
                             </div>
-                            <NavButton extraClasses="absolute bottom-10 left-20 p-1" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} /></NavButton>
-                            <NavButton extraClasses="absolute bottom-10 right-20 p-1" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} /></NavButton>
+                            <NavButton extraClasses="absolute bottom-10 -translate-x-32 p-1" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
+                            <NavButton extraClasses="absolute bottom-10 translate-x-32 p-1" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>
                         </div>
-                        <NavButton extraClasses="w-36 h-12 absolute -bottom-8 bg-white border-2">View all</NavButton>
-                        <div className="border-2 border-red-400 bg-white w-8/12 h-16 absolute top-0 -translate-y-6 flex justify-center items-center">
-                            <h1>Testimonies</h1>
+                        <NavButton extraClasses="w-36 h-12 absolute -bottom-8 bg-white">View all</NavButton>
+                        <div className="rounded-sm bg-white w-1/2 h-16 absolute top-0 -translate-y-6 flex justify-center items-center">
+                            <h1 className="text-3xl">Testimonies</h1>
                         </div>
                     </div>
                 </>
             ) : (
-                <div className=" mt-5 h-full w-full flex flex-col justify-center items-center">
-                    <div className="border-2 border-red-400 w-3/4 h-16 bg-white flex items-center justify-center z-10">
-                        <h1>Testimonies</h1>
+                <div className="mt-5 h-full w-full flex flex-col justify-center items-center">
+                    <div className="w-1/2 h-16 bg-white flex items-center justify-center z-10">
+                        <h1 className="text-3xl">Testimonies</h1>
                     </div>
-                    <div className="border-2 border-green-400 w-10/12 h-3/5 -translate-y-6 flex justify-center items-center relative">
+                    <div className="card2 shadow-md w-10/12 h-3/5 -translate-y-6 flex justify-center items-center relative">
                         <div className="w-5/6 h-5/6 flex flex-col justify-evenly items-center">
                             <h1>{testimonies[currentTestimony].title}</h1>
                             <p className="text-center text-sm">{testimonies[currentTestimony].content}</p>
                             <h2 className="text-sm"> -{testimonies[currentTestimony].name}</h2>
                         </div>
-                        <NavButton extraClasses="-translate-x-20 absolute bottom-2" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} /></NavButton>
-                        <NavButton extraClasses="translate-x-20 absolute bottom-2" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} /></NavButton>
+                        <NavButton extraClasses="-translate-x-20 absolute bottom-2" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
+                        <NavButton extraClasses="translate-x-20 absolute bottom-2" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>
                     </div>
-                    <div className="border-2 bg-gray-400 h-2/5 w-9/12" style={backgroundStyle}></div>
-                    <NavButton extraClasses="w-24 h-10 mt-3.5 border-2">View all</NavButton>
+                    <div className="rounded-sm bg-gray-400 h-2/5 w-9/12 shadow-lg" style={backgroundStyle}></div>
+                    <NavButton extraClasses="w-24 h-10 mt-3.5 border-2 bg-white">View all</NavButton>
                 </div>
             )}
         </div>

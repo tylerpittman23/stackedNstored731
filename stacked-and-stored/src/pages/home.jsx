@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Testimony, Welcome, HeroSlides} from '../components/HomeComponents/'
+import { Testimony, Welcome, HeroSlides} from '../components/HomeComponents/';
+
 
 export const Home = () => {
 
@@ -15,8 +16,8 @@ export const Home = () => {
 
     return (
         <> 
-        <div className="border-2 flex flex-col justify-center items-center">
-            <HeroSlides windowWidth={windowWidth}/>
+        <div className="flex flex-col justify-center items-center">
+            <HeroSlides windowWidth={windowWidth} />
             <Welcome windowWidth={windowWidth}/>
             <Testimony windowWidth={windowWidth}/>
         </div>

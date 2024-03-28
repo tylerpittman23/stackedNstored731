@@ -79,7 +79,6 @@ export const Testimony = ({ windowWidth }) => {
                             <div className="w-5/6 h-5/6 flex flex-col items-center justify-evenly">
                                 <h1 className="text-3xl">{testimonies[currentTestimony].title}</h1>
                                 <p className="text-center text-sm">{testimonies[currentTestimony].content}</p>
-                                <h2> -{testimonies[currentTestimony].name}</h2>
                             </div>
                             <NavButton extraClasses="absolute bottom-10 -translate-x-32 p-1" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
                             <NavButton extraClasses="absolute bottom-10 translate-x-32 p-1" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>
@@ -99,7 +98,6 @@ export const Testimony = ({ windowWidth }) => {
                         <div className="w-5/6 h-5/6 flex flex-col justify-evenly items-center">
                             <h1>{testimonies[currentTestimony].title}</h1>
                             <p className="text-center text-sm">{testimonies[currentTestimony].content}</p>
-                            <h2 className="text-sm"> -{testimonies[currentTestimony].name}</h2>
                         </div>
                         <NavButton extraClasses="-translate-x-20 absolute bottom-2" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
                         <NavButton extraClasses="translate-x-20 absolute bottom-2" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>

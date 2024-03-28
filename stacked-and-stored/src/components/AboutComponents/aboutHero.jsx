@@ -22,7 +22,7 @@ export const AboutHero = ({ windowWidth, data }) => {
                         <p className='text-lg text-center'>{data.statement}</p>
                     </div>
                         <div className="bg-gray-400 w-3/5 h-1/2 absolute left-16 bottom-12" style={{...backgroundStyle, backgroundImage: `url(${heroIMGWide})`}}></div>
-                        <div className=" card rounded-sm shadow-md w-2/5 h-1/2 absolute right-6 bottom-20 flex flex-col justify-evenly items-center p-3">
+                        <div className=" card rounded-sm shadow-md bg-gray-100 w-2/5 h-1/2 absolute right-6 bottom-20 flex flex-col justify-evenly items-center p-3">
                             <h2>Hi, I'm Joann Lee</h2>
                             <p className="text-center">{data.intro}</p>
                         </div>

@@ -14,7 +14,7 @@ const testimonies = [
     {
         name: 'Jordan Pittman',
         title: 'New go to!',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Ante metus dictum at tempor commodo ullamcorper a. Morbi quis commodo odio aenean sed. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Lobortis mattis aliquam faucibus purus in.',
+        content: 'I highly recommend stacked and stored. Joann came to my rescue right after Christmas when I wanted to go on a trip but as soon as I got back my kitchen would be remodeled.  I needed everything packed up and organized while I was gone. I trusted Joann to come and do this monumental task while I was gone.  I came home to find that Joann went above and beyond my expectations. My kitchen was clean and empty.  Boxes were organized and labeled which was so helpful when it came time to unpack.  Plus I needed a few items during the remodel and I found those items quickly and easily because of the lists and labels of all the contents. It took her a couple of days to do what would have taken me weeks.  I would not hesitate for a second to call her to pack for me again or to tackle an organization project',
         src: testIMG2,
     },
     {

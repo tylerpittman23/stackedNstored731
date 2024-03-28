@@ -97,7 +97,7 @@ export const Testimony = ({ windowWidth }) => {
                     <div className="card2 shadow-md w-10/12 h-3/5 -translate-y-6 flex justify-center items-center relative">
                         <div className="w-5/6 h-5/6 flex flex-col justify-evenly items-center">
                             <h1>{testimonies[currentTestimony].title}</h1>
-                            <p className="text-center text-sm">{testimonies[currentTestimony].content}</p>
+                            <p className="text-center" style={{fontSize: '13px'}}>{testimonies[currentTestimony].content}</p>
                         </div>
                         <NavButton extraClasses="-translate-x-20 absolute bottom-2" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
                         <NavButton extraClasses="translate-x-20 absolute bottom-2" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>

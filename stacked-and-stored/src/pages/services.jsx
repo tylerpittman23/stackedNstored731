@@ -64,13 +64,13 @@ export const Services = () => {
       }, [windowWidth]);
     return (
         <>
-        <div className="border-2 border-black h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-64">
+        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-64">
 
         {type === 'large' ? 
         (
             <>
-                <div className="shadow-md h-48 w-3/5 flex justify-center items-center relative p-6">
-                    <p className="text-center text-xl">{serviceData.header}</p>
+                <div className="shadow-md h-48 w-3/5 bg-white flex justify-center items-center relative p-6">
+                    <p className="text-center text-xl bg-white">{serviceData.header}</p>
                 </div>
                 {serviceData.services.map((service, index) => {
                     if (index % 2 === 0) {

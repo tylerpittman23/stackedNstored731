@@ -70,7 +70,7 @@ export const Projects = () => {
       }, [windowWidth]);
     return (
         <>
-        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-64">
+        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-52">
             {isLargeScreen ? 
             (
                 <>
@@ -87,7 +87,7 @@ export const Projects = () => {
                 </>
             ) : (
                 <>
-                <div className="bg-white shadow-md rounded-sm w-3/4 h-36 mb-5 flex justify-center items-center px-5">
+                <div className="bg-white shadow-md rounded-sm w-5/6 h-44 mb-5 flex justify-center items-center p-5">
                     <p className="text-center">{projectData.header}</p>
                 </div>
                 <div className="w-full grid grid-cols-1">

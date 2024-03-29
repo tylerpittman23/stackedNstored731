@@ -9,7 +9,7 @@ export const Navbar = ({ windowWidth }) => {
 
     const location = useLocation();
 
-    const navClasses = "w-full bg-white flex items-center py-1.5 fixed top-0 z-40 pt-3.5 shadow-lg";
+    const navClasses = "w-full h-36 bg-white flex items-center py-1.5 fixed top-0 z-40 pt-3.5 shadow-lg";
     const wideScreenNavClasses = `${navClasses} justify-evenly`;
     const narrowScreenNavClasses = `${navClasses} justify-center px-4`;
     const activeLinkClass = 'border-2 border-gray-300 shadow-xl -translate-y-0.5'
@@ -19,11 +19,11 @@ export const Navbar = ({ windowWidth }) => {
         <>
             {isWideScreen ? (
                 <nav className={wideScreenNavClasses}>
-                    <div className="w-11/12 h-48 flex justify-evenly items-center">
+                    <div className="w-11/12 h-36 flex justify-evenly items-center">
                         <Link to="/about/" className={`${location.pathname === '/about/' ? activeLinkClass : ''} ${linkClasses}`}>About</Link>
                         <Link to="/services/" className={`${location.pathname === '/services/' ? activeLinkClass : ''} ${linkClasses}`}>Services</Link>
-                        <div className="logo-container w-1/2 h-3/4 flex items-center justify-center relative">
-                            <img src={logo} alt="Logo" className=""/>
+                        <div className="logo-container w-1/2 h-3/5 flex items-center justify-center relative">
+                            <img src={logo} alt="Logo" className="w-96 h-36"/>
                             <Link to="/" className="w-1/3 h-3/5 rounded-full cursor-pointer absolute"></Link>
                         </div>
                         <Link to="/projects/" className={`${location.pathname === '/projects/' ? activeLinkClass : ''} ${linkClasses}`}>Projects</Link>
@@ -33,8 +33,8 @@ export const Navbar = ({ windowWidth }) => {
             ) : (
                 <>
                     <nav className={narrowScreenNavClasses}>
-                        <div className="logo-container h-48 w-5/6 flex items-center justify-center -translate-x-6 relative">
-                            <img src={logo} alt="Logo"/>
+                        <div className="logo-container h-36 w-96 flex items-center justify-center relative">
+                            <img src={logo} alt="Logo" className="w-80"/>
                             <Link to="/" className="w-2/3 h-5/6 rounded-full absolute cursor-pointer z-50"></Link>
                         </div>
                     </nav>

@@ -76,7 +76,7 @@ export const Services = () => {
       }, [windowWidth]);
     return (
         <>
-        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-64">
+        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-52">
 
         {type === 'large' ? 
         (

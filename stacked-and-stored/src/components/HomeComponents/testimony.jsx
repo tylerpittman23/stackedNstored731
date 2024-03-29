@@ -97,7 +97,7 @@ export const Testimony = ({ windowWidth }) => {
                     </div>
                     <div className="rounded-sm bg-gray-400 h-2/5 w-9/12 shadow-lg" style={backgroundStyle}></div>
                     <div className="bg-gray-300 rounded-sm transition ease-in-out shadow-sm w-32 h-14 translate-y-8 flex justify-center items-center hover:shadow-lg hover:bg-gray-400">
-                        <Link to="" className="text-center text-2xl text-white">View all</Link>
+                        <Link to="/about/#testimonies" className="text-center text-2xl text-white">View all</Link>
                     </div>
                 </div>
             )}

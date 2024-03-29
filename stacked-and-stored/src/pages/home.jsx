@@ -7,6 +7,10 @@ export const Home = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); 
 
     useEffect(() => {
+        window.scrollTo(0, 0, { behaivor: 'smooth' });
+    }, []);
+
+    useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         }

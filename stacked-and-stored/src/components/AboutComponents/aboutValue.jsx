@@ -6,12 +6,12 @@ export const AboutValue = ({ windowWidth, data }) => {
         (
             <>
             <div className="w-full h-screen flex justify-evenly items-center">
-                <div className="bg-gray-200 w-full h-3/5 flex justify-evenly items-center">
+                <div className="bg-gray-200 w-full h-4/5 flex justify-evenly items-center">
                     {data.map(value => {
                         return(
                             <div key={value.id} className="border-2 bg-white rounded-md shadow-sm h-2/3 w-1/4 flex flex-col justify-evenly items-center px-5">
-                                <h1 className="text-3xl">{value.title}</h1>
-                                <p className="text-center">{value.content}</p>
+                                <h1 className="text-3xl text-gray-500">{value.title}</h1>
+                                <p className="text-center text-gray-500">{value.content}</p>
                             </div>
                         )
                     })}

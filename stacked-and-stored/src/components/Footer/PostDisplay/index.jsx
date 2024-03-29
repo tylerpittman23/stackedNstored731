@@ -1,6 +1,6 @@
 export const PostDisplay = ({ windowWidth, post }) => {
-    const isWideScreen = windowWidth >= 900;
-    const postClass = `rounded-md shadow-lg bg-gray-200 flex ${isWideScreen ? "w-48" : "w-4/5"} h-64`;
+    const isWideScreen = windowWidth >= 1100;
+    const postClass = `rounded-md shadow-lg bg-gray-200 flex ${isWideScreen ? "w-64 h-80" : "w-4/5 h-72"}`;
     const postStyle = {
         backgroundImage: `url(${post.img})`,
         backgroundSize: 'cover',

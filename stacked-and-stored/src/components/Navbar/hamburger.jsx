@@ -1,13 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import logo from '../Navbar/logo.png';
 
-const logoStyles = {
-  backgroundImage: `url(${logo})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-}
+const linkClasses = 'border-1 shadow-sm bg-gray-100 text-gray-500 rounded-sm w-24 h-10 flex items-center justify-center hover:shadow-md transition-shadow';
+const activeLinkClass = 'border-2 border-gray-300 bg-white shadow-xl';
 
 export const HamburgerBtn = () => {
 
@@ -18,22 +15,17 @@ export const HamburgerBtn = () => {
       className="flex flex-col justify-center items-center fixed top-8 right-6 z-50"
       onClick={() => setIsOpen(!isOpen)}
     >
-      {/* Line 1 */}
       <span
         className={`block w-10 h-0.5 bg-gray-500 transform transition duration-500 ease-in-out my-1 ${
           isOpen ? "rotate-45 translate-y-1.5" : ""
         }`}
         
       ></span>
-
-      {/* Line 2, hidden when open */}
       <span
         className={`block w-8 h-0.5 bg-gray-500 transition-all duration-300 ${
           isOpen ? "opacity-0" : "opacity-100"
         }`}
       ></span>
-
-      {/* Line 3 */}
       <span
         className={`block w-10 h-0.5 bg-gray-500 transform transition duration-500 ease-in-out my-1 ${
           isOpen ? "-rotate-45 -translate-y-1.5" : ""
@@ -47,10 +39,10 @@ export const HamburgerBtn = () => {
           <Link onClick={() => setIsOpen(false)} to="/" className="absolute w-3/5 h-3/5 rounded-full"></Link>
         </div>
         <div className="flex justify-evenly items-start flex-col h-3/4 px-4">
-          <Link onClick={() => setIsOpen(false)} to="/about" className="border-2 border-black w-24 flex items-center justify-center">About</Link>
-          <Link onClick={() => setIsOpen(false)} to="/services" className="border-2 border-black w-20 flex items-center justify-center">Services</Link>
-          <Link onClick={() => setIsOpen(false)} to="/projects" className="border-2 border-black w-20 flex items-center justify-center">Projects</Link>
-          <Link onClick={() => setIsOpen(false)} to="/contact" className="border-2 border-black w-20 flex items-center justify-center">Contact</Link>
+          <Link onClick={() => setIsOpen(false)} to="/about/" className={`${location.pathname === '/about/' ? activeLinkClass : ''} ${linkClasses}`}>About</Link>
+          <Link onClick={() => setIsOpen(false)} to="/services/" className={`${location.pathname === '/services/' ? activeLinkClass : ''} ${linkClasses}`}>Services</Link>
+          <Link onClick={() => setIsOpen(false)} to="/projects/" className={`${location.pathname === '/projects/' ? activeLinkClass : ''} ${linkClasses}`}>Projects</Link>
+          <Link onClick={() => setIsOpen(false)} to="/contact/" className={`${location.pathname === '/contact/' ? activeLinkClass : ''} ${linkClasses}`}>Contact</Link>
         </div>
       </div> : ''}
         </>

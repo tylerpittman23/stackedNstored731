@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { imgONE, imgTWO, imgTHREE, imgFOUR, imgFIVE, imgSIX, imgSEVEN } from "./images";
@@ -75,8 +76,8 @@ export const HeroSlides = ({ windowWidth }) => {
     return (
         <div className="h-screen bg-gray-100 flex flex-col justify-center items-center w-full pt-64">
             <div className={`${isWideScreen ? slideWidthClass : "w-10/12"} bg-gray-400 rounded-sm h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
-                <div className="rounded-md bg-gray-300 absolute bottom-6 h-16 w-40 flex flex-col items-center justify-center">
-                    <h1 className="text-lg text-center text-white">Contact me for an estimate</h1>
+                <div className="rounded-md bg-gray-300 absolute bottom-6 h-16 w-40 flex flex-col items-center justify-center transition ease-in-out shadow-sm hover:shadow-xl hover:bg-gray-400">
+                    <Link to="/contact/" className="text-lg text-center text-white">Contact me for an estimate</Link>
                 </div>
                 <div 
                     className={`${isWideScreen ? ('-left-16') : ('left-6')} absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}

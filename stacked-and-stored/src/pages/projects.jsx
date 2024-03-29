@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectsComponents/projectCard";
 import { atticIMG, cabinet2IMG, cabinetIMG, closetIMG, garageIMG, pantryIMG } from '../components/ProjectsComponents/images'
 
@@ -6,27 +7,33 @@ const projectData = {
     header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. incididunt ut labore et dolore magna aliqua.',
     projects: [
         {
-            title: 'This Project Title',
+            id: 'project1',
+            title: 'Project 1',
             src: atticIMG,
         },
         {
-            title: 'This Project Title',
+            id: 'project2',
+            title: 'Project 2',
             src: cabinet2IMG,
         },        
         {
-            title: 'This Project Title',
+            id: 'project3',
+            title: 'Project 3',
             src: closetIMG,
         },        
         {
-            title: 'This Project Title',
+            id: 'project4',
+            title: 'Project 4',
             src: cabinetIMG,
         },        
         {
-            title: 'This Project Title',
+            id: 'project5',
+            title: 'Project 5',
             src: garageIMG,
         },        
         {
-            title: 'This Project Title',
+            id: 'project6',
+            title: 'Project 6',
             src: pantryIMG,
         },
     ]
@@ -45,6 +52,15 @@ const smallStyles = {
 export const Projects = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); 
     const isLargeScreen = windowWidth > 800;
+    const location = useLocation();
+    useEffect(() => {
+        const scrollId = location.hash;
+        if(scrollId) {
+            const element = document.querySelector(scrollId);
+            return element.scrollIntoView()
+        }
+        return window.scrollTo(0, 0, { behavior: 'smooth' })
+    }, [location])
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -54,7 +70,7 @@ export const Projects = () => {
       }, [windowWidth]);
     return (
         <>
-        <div className="border-2 border-black h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-64">
+        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-64">
             {isLargeScreen ? 
             (
                 <>
@@ -64,7 +80,7 @@ export const Projects = () => {
                 <div className="w-full grid grid-cols-2">
                 {projectData.projects.map((project, index) => {
                     return (
-                        <ProjectCard key={index} project={project} extraClasses={largeStyles}/>
+                        <ProjectCard id={project.id} key={index} project={project} extraClasses={largeStyles}/>
                     )
                 })}
                 </div>
@@ -78,7 +94,7 @@ export const Projects = () => {
                     {projectData.projects.map((project, index) => {
                         let bg = index % 2 === 0 ? '' : 'bg-white';
                     return (
-                        <ProjectCard key={index} project={project} extraClasses={{...smallStyles, bg}}/>
+                        <ProjectCard id={project.id} key={index} project={project} extraClasses={{...smallStyles, bg}}/>
                     )
                     })}
                 </div>

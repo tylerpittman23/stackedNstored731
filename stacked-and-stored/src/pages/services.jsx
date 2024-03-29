@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ServiceCard } from "../components/ServiceComponents";
 import { atticIMG, cabinetIMG, closetIMG, garageIMG, pantryIMG } from "../components/ServiceComponents/images";
 
@@ -54,6 +55,17 @@ const serviceData = {
 export const Services = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); 
     const type = windowWidth > 800 ? 'large' : 'small';
+    
+    const location = useLocation();
+
+    useEffect(() => {
+        const scrollId = location.hash;
+        if(scrollId) {
+            const element = document.querySelector(scrollId);
+            return element.scrollIntoView()
+        }
+        return window.scrollTo(0, 0, { behavior: 'smooth' })
+    }, [location])
 
     useEffect(() => {
         const handleResize = () => {
@@ -74,9 +86,9 @@ export const Services = () => {
                 </div>
                 {serviceData.services.map((service, index) => {
                     if (index % 2 === 0) {
-                    return <ServiceCard key={index} type={type} extraClasses={leftCardStyles} serviceData={service}/>
+                    return <ServiceCard key={service.id} type={type} extraClasses={leftCardStyles} serviceData={service}/>
                     }
-                    return <ServiceCard key={index} type={type} extraClasses={rightCardStyles} serviceData={service}/>
+                    return <ServiceCard key={service.id} type={type} extraClasses={rightCardStyles} serviceData={service}/>
                 })}
             </>
         ) : (
@@ -86,7 +98,7 @@ export const Services = () => {
             </div>
             {serviceData.services.map((service, index) => {
                 let bg = index % 2 === 0 ? '' : 'bg-white';
-                return <ServiceCard key={index} type={type} extraClasses={bg} serviceData={service}/>
+                return <ServiceCard key={service.id} type={type} extraClasses={bg} serviceData={service}/>
             })}
             </>
         )}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { NavButton } from "./navButton";
@@ -74,36 +75,39 @@ export const Testimony = ({ windowWidth }) => {
                 <>
                     <div className="bg-gray-100 w-2/3 h-52"></div>
                     <div className=" bg-gray-400 w-2/5 shadow-lg absolute h-3/5 right-6" style={backgroundStyle}></div>
-                    <div className="card2 shadow-md w-1/2 h-96 absolute left-8 flex flex-col justify-center items-center">
+                    <div className="card2 bg-white shadow-md w-1/2 h-96 absolute left-8 flex flex-col justify-center items-center">
                         <div className="w-full h-full flex justify-center items-center">
                             <div className="w-5/6 h-5/6 flex flex-col items-center justify-evenly">
-                                <h1 className="text-3xl">{testimonies[currentTestimony].title}</h1>
-                                <p className="text-center text-sm">{testimonies[currentTestimony].content}</p>
+                                <h1 className="text-3xl text-gray-600">{testimonies[currentTestimony].title}</h1>
+                                <p className="text-center text-sm text-gray-500">{testimonies[currentTestimony].content}</p>
                             </div>
                             <NavButton extraClasses="absolute bottom-10 -translate-x-32 p-1" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
                             <NavButton extraClasses="absolute bottom-10 translate-x-32 p-1" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>
                         </div>
-                        <NavButton extraClasses="w-36 h-12 absolute -bottom-8 bg-white">View all</NavButton>
-                        <div className="rounded-sm bg-white w-1/2 h-16 absolute top-0 -translate-y-6 flex justify-center items-center">
-                            <h1 className="text-3xl">Testimonies</h1>
+                        <div className="bg-gray-300 rounded-sm transition ease-in-out shadow-sm w-48 h-16 translate-y-7 flex justify-center items-center hover:shadow-lg hover:bg-gray-400">
+                            <Link to="" className="text-center text-2xl text-white">View all</Link>
+                        </div>                        <div className="rounded-sm bg-white w-1/2 h-16 absolute top-0 -translate-y-6 flex justify-center items-center shadow-sm">
+                            <h1 className="text-3xl text-gray-600">Testimonies</h1>
                         </div>
                     </div>
                 </>
             ) : (
                 <div className="mt-5 h-full w-full flex flex-col justify-center items-center">
-                    <div className="w-1/2 h-16 bg-white flex items-center justify-center z-10">
-                        <h1 className="text-3xl">Testimonies</h1>
+                    <div className="w-1/2 h-16 bg-white flex items-center justify-center z-10 shadow-sm">
+                        <h1 className="text-3xl text-gray-600">Testimonies</h1>
                     </div>
                     <div className="card2 shadow-md w-10/12 h-3/5 -translate-y-6 flex justify-center items-center relative">
                         <div className="w-5/6 h-5/6 flex flex-col justify-evenly items-center">
-                            <h1>{testimonies[currentTestimony].title}</h1>
-                            <p className="text-center" style={{fontSize: '13px'}}>{testimonies[currentTestimony].content}</p>
+                            <h1 className="text-center text-gray-500">{testimonies[currentTestimony].title}</h1>
+                            <p className="text-center text-gray-500" style={{fontSize: '13px'}}>{testimonies[currentTestimony].content}</p>
                         </div>
                         <NavButton extraClasses="-translate-x-20 absolute bottom-2" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
                         <NavButton extraClasses="translate-x-20 absolute bottom-2" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>
                     </div>
                     <div className="rounded-sm bg-gray-400 h-2/5 w-9/12 shadow-lg" style={backgroundStyle}></div>
-                    <NavButton extraClasses="w-24 h-10 mt-3.5 border-2 bg-white">View all</NavButton>
+                    <div className="bg-gray-300 rounded-sm transition ease-in-out shadow-sm w-32 h-14 translate-y-8 flex justify-center items-center hover:shadow-lg hover:bg-gray-400">
+                        <Link to="" className="text-center text-2xl text-white">View all</Link>
+                    </div>
                 </div>
             )}
         </div>

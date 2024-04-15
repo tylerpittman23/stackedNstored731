@@ -14,13 +14,13 @@ const footerData = {
             href: 'https://www.instagram.com/reel/C3ZAjMprMWP/',
             title: 'Attic Revamp',
             img: reelTWO,
-            description: "My client was motivated!! We accomplished all this in one day with 3 trips to the dump and 3 to donate! At the end of the day she had free space in her attic!! Let’s get your attic (or other space) cleaned out!! Message me!! 😊 #stackedandstored731 #atticgoals #getorganized #professionalorganizer #jacksontn",
+            description: "My client was motivated!! We accomplished all this in one day with 3 trips to the dump and 3 to donate! At the end of the day she had free space in her attic!! 😊",
         },
         {
             href: 'https://www.instagram.com/reel/Cz10ZjdAwos/',
             title: 'Storage Closet Makeover',
             img: reelTHREE,
-            description: "Large storage closet makeover!! What you don’t see here: removed old shelving, repaired wall, fresh coat of paint, collaborative effort to sort and declutter, remaining things organized into containers. My client wanted clear bins (my fav 😉) so she can see what’s inside. Now everything will be easy to find! Let me help organize your space!! #stackedandstored731 #getorganized #declutter #reclaimyourspace #sterilite #closetmaid",
+            description: "Large storage closet makeover!! What you don’t see here: removed old shelving, repaired wall, fresh coat of paint, collaborative effort to sort and declutter, remaining things organized into containers. My client wanted clear bins (my fav 😉) so she can see what’s inside.",
         },
         {
             href: 'https://www.instagram.com/reel/CitfAyEgVLB/',

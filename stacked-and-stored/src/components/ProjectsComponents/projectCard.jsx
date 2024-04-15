@@ -31,7 +31,7 @@ export const ProjectCard = ({ extraClasses, project }) => {
     return(
         <>
         <div id={project.id} className={`${extraClasses.bg} h-screen flex flex-col justify-center items-center py-5 relative`}>
-            <div className="bg-gray-300 h-64 w-screen absolute bottom-64"></div>
+            <div className="bg-gray-300 h-64 w-screen absolute bottom-1/4"></div>
             <div className={`${extraClasses.card} w-11/12 flex flex-col justify-evenly items-center relative`}>
                 <div className={`${extraClasses.header} card relative bg-white shadow-md w-3/4 flex justify-center items-center`}>
                     <h1 className="text-4xl">{project.title}</h1>

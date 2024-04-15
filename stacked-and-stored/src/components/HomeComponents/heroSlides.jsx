@@ -75,7 +75,7 @@ export const HeroSlides = ({ windowWidth }) => {
     return (
         <div className="h-screen bg-gray-100 flex flex-col justify-center items-center w-full pt-36">
             <div className={`bg-gray-400 rounded-sm w-full max-w-screen-2xl h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
-                <div className="rounded-md bg-gray-300 absolute bottom-6 h-16 w-40 flex flex-col items-center justify-center transition ease-in-out shadow-sm hover:shadow-xl hover:bg-gray-400">
+                <div className="rounded-md bg-gray-300 absolute bottom-6 p-3 w-64 flex flex-col items-center justify-center transition ease-in-out shadow-sm hover:shadow-xl hover:bg-gray-400">
                     <Link to="/contact/" className="text-lg text-center text-white">Contact me for an estimate</Link>
                 </div>
                 <div 

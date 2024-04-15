@@ -1,32 +1,32 @@
 import { PostDisplay } from "./PostDisplay";
 import { FooterLink } from "./FooterLink";
-import { reelONE } from "./images";
+import { reelONE, reelTWO, reelTHREE, reelFOUR } from "./images";
 
 const footerData = {
     posts: [
         {
             href: 'https://www.instagram.com/reel/Cwtk-xirZwq/',
-            title: 'Garage Makeover!',
+            title: 'Garage Makeover',
             img: reelONE,
-            description: 'Watch me turn this garage into a functional space',
+            description: "I’d love to help make your garage more functional!! #stackedandstored731 #garagegoals #jacksontn #declutter #getorganized #reclaimyourspace",
         },
         {
-            href: 'https://www.instagram.com/reel/Cwtk-xirZwq/',
-            title: 'Garage Makeover!',
-            img: reelONE,
-            description: 'Watch me turn this garage into a functional space',
+            href: 'https://www.instagram.com/reel/C3ZAjMprMWP/',
+            title: 'Attic Revamp',
+            img: reelTWO,
+            description: "My client was motivated!! We accomplished all this in one day with 3 trips to the dump and 3 to donate! At the end of the day she had free space in her attic!! Let’s get your attic (or other space) cleaned out!! Message me!! 😊 #stackedandstored731 #atticgoals #getorganized #professionalorganizer #jacksontn",
         },
         {
-            href: 'https://www.instagram.com/reel/Cwtk-xirZwq/',
-            title: 'Garage Makeover!',
-            img: reelONE,
-            description: 'Watch me turn this garage into a functional space',
+            href: 'https://www.instagram.com/reel/Cz10ZjdAwos/',
+            title: 'Storage Closet Makeover',
+            img: reelTHREE,
+            description: "Large storage closet makeover!! What you don’t see here: removed old shelving, repaired wall, fresh coat of paint, collaborative effort to sort and declutter, remaining things organized into containers. My client wanted clear bins (my fav 😉) so she can see what’s inside. Now everything will be easy to find! Let me help organize your space!! #stackedandstored731 #getorganized #declutter #reclaimyourspace #sterilite #closetmaid",
         },
         {
-            href: 'https://www.instagram.com/reel/Cwtk-xirZwq/',
-            title: 'Garage Makeover!',
-            img: reelONE,
-            description: 'Watch me turn this garage into a functional space',
+            href: 'https://www.instagram.com/reel/CitfAyEgVLB/',
+            title: 'Organized Pantry',
+            img: reelFOUR,
+            description: 'Do you have a space that needs to be organized? Decluttered? Message me!!',
         }
     ],
     links: {
@@ -113,33 +113,19 @@ export const Footer = ({ windowWidth }) => {
     const isWideScreen = windowWidth >= 800;
 
     return (
-        <div className="bg-gray-100 w-full flex flex-col items-center pt-24">
-            <div className='px-'>
-                <h1 className="text-3xl text-gray-500 text-center">
-                    follow me <a className='text-gray-400' href="https://www.instagram.com/stacked_stored_731/" target="blank">@stacked_stored_731</a> on Instagram</h1>
+        <div className="bg-gray-100 w-full flex flex-col items-center pt-16">
+            <div>
+                <h1 className="text-3xl text-gray-500 text-center px-4">
+                    follow me <a className='text-gray-400' href="https://www.instagram.com/stacked_stored_731/reels/" target="blank">@stacked_stored_731</a> on Instagram</h1>
             </div>
-            <div className="w-full">
-                {isWideScreen ? (
-                    <div className="flex w-full justify-evenly mt-5">
-                        <PostDisplay windowWidth={windowWidth} post={footerData.posts[0]}/>
-                        <PostDisplay windowWidth={windowWidth} post={footerData.posts[1]}/>
-                        <PostDisplay windowWidth={windowWidth} post={footerData.posts[2]}/>
-                        <PostDisplay windowWidth={windowWidth} post={footerData.posts[3]}/>
-                    </div>
-                ) : (
-                    <>
-                        <div className="flex justify-evenly mt-5">
-                            <PostDisplay windowWidth={windowWidth} post={footerData.posts[0]}/>
-                            <PostDisplay windowWidth={windowWidth} post={footerData.posts[1]}/>
-                        </div>
-                        <div className="flex justify-evenly mt-5">
-                            <PostDisplay windowWidth={windowWidth} post={footerData.posts[2]} />
-                            <PostDisplay windowWidth={windowWidth} post={footerData.posts[3]}/>
-                        </div>
-                    </>
-                )}
+            <div className="w-full p-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {footerData.posts.map((post, index) => (
+                        <PostDisplay key={index} windowWidth={windowWidth} post={post} />
+                    ))}
+                </div>
             </div>
-            <div className={`${isWideScreen ? 'justify-evenly items-center' : 'flex-col justify-center items-start'} w-full mt-10 flex p-4`}>                
+            <div className={`${isWideScreen ? 'justify-evenly items-center' : 'flex-col justify-center items-start'} w-full mt-10 flex p-4`}>
                 <FooterLink links={footerData.links.services}/>
                 <FooterLink links={footerData.links.projects} />
                 <FooterLink links={footerData.links.contact} />

@@ -2,7 +2,7 @@ export const AboutValue = ({ windowWidth, data }) => {
 
     return (
         <>
-        {windowWidth > 900 ? 
+        {windowWidth > 1000 ? 
         (
             <>
             <div className="w-full h-screen flex justify-evenly items-center">

@@ -100,8 +100,8 @@ const footerData = {
             linksArr: [
                 {
                     id: 1,
-                    content: '',
-                    to: '',
+                    content: 'Reach Out!',
+                    to: '/contact',
                 },
             ]
         }
@@ -111,12 +111,12 @@ const footerData = {
 
 export const Footer = ({ windowWidth }) => {
     const isWideScreen = windowWidth >= 800;
-    const followClass = `w-full h-16 text-${isWideScreen ? '3xl' : 'xl mt-10 mb-10'} flex justify-center items-center`;
 
     return (
         <div className="bg-gray-100 w-full flex flex-col items-center pt-24">
-            <div className={followClass}>
-                <h1 className="text-3xl text-gray-500">follow me @INSTAGRAM</h1>
+            <div className='px-'>
+                <h1 className="text-3xl text-gray-500 text-center">
+                    follow me <a className='text-gray-400' href="https://www.instagram.com/stacked_stored_731/" target="blank">@stacked_stored_731</a> on Instagram</h1>
             </div>
             <div className="w-full">
                 {isWideScreen ? (

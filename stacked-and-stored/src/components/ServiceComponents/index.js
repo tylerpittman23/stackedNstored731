@@ -1,3 +1,3 @@
-import { ServiceCard } from "./service";
+import { ServiceCard } from "./serviceCard";
 
 export { ServiceCard }

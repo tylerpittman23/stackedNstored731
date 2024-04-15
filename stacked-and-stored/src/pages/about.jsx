@@ -39,7 +39,7 @@ const aboutData = {
             content: "We cannot recommend Stacked and Stored 731 highly enough. Joann took the time to understand our specific needs and preferences, tailoring her solutions to suit our requirements perfectly. Her ability to balance functionality with aesthetic appeal ensured that not only was our garage more organized than ever before, but it also looked better than we could have imagined. Whether you're grappling with a cluttered garage, an overflowing closet, or any other organizational challenge, Joann possesses the expertise, dedication, and integrity to deliver outstanding results. With Stacked and Stored 731, you're not just hiring a service – you're gaining a trusted partner in the quest for a more organized and peaceful living space.",
         },
         {
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Condimentum mattis pellentesque id nibh tortor id aliquet. Mi tempus imperdiet nulla malesuada pellentesque. Tincidunt eget nullam non nisi est sit amet facilisis. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Suscipit adipiscing bibendum est ultricies. Aenean pharetra magna ac placerat. Mauris a diam maecenas sed enim ut sem viverra.',
+            content: "Thrilled with the professional organizing services I received from Joann! In every interaction, her communication was clear and responsive, making the entire process seamless. Joann's services were delivered efficiently, and the pricing was fair and transparent. I am looking forward to getting Joann to help me with my next organizing project! Highly recommend to anyone looking to declutter and beautify their space with the help of a true professional.",
         }
     ],
 }
@@ -71,7 +71,7 @@ export const About = () => {
             <AboutHero windowWidth={windowWidth} data={aboutData.hero}/>
             <AboutValue windowWidth={windowWidth} data={aboutData.values}/>
             <div id="testimonies" className="bg-white h-full w-full flex flex-wrap justify-center items-center relative pt-24">
-                <h1 className="card bg-white shadow-md text-center text-4xl p-4 absolute top-6">Testimonies</h1>
+                <h1 className="bg-white shadow-md text-center text-4xl p-4 absolute top-6">Testimonies</h1>
             {aboutData.testimonies.map((testimony, index) => {
                 return (
                     <TestimonyCard key={index} testimony={testimony}/>

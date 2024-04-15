@@ -23,13 +23,13 @@ const testimonies = [
         src: testIMG4,
     },
     {
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Condimentum mattis pellentesque id nibh tortor id aliquet. Mi tempus imperdiet nulla malesuada pellentesque. Tincidunt eget nullam non nisi est sit amet facilisis. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Suscipit adipiscing bibendum est ultricies. Aenean pharetra magna ac placerat. Mauris a diam maecenas sed enim ut sem viverra.',
+        content: "Thrilled with the professional organizing services I received from Joann! In every interaction, her communication was clear and responsive, making the entire process seamless. Joann's services were delivered efficiently, and the pricing was fair and transparent. I am looking forward to getting Joann to help me with my next organizing project! Highly recommend to anyone looking to declutter and beautify their space with the help of a true professional.",
         src: testIMG5,
     }
 ];
 
 export const Testimony = ({ windowWidth }) => {
-    const isWideScreen = windowWidth > 800;
+    const isWideScreen = windowWidth > 900;
     // Placeholder for setting the current testimony. useState hook usage will be determined by your logic addition.
     const [currentTestimony, setCurrentTestimony] = useState(0);
 
@@ -60,26 +60,28 @@ export const Testimony = ({ windowWidth }) => {
     // display testimony details in the container
 
     return (
-        <div className="h-screen w-full bg-gray-100 flex justify-center items-center">
+        <div className="h-full w-full bg-gray-100 flex justify-center items-center mt-24">
             {isWideScreen ? (
                 <>
+                 <div className='h-screen flex items-center'>
                     <div className="bg-gray-100 w-2/3 h-52"></div>
                     <div className=" bg-gray-400 w-2/5 shadow-lg absolute h-3/5 right-6" style={backgroundStyle}></div>
-                    <div className="card2 bg-white shadow-md w-1/2 h-96 absolute left-8 flex flex-col justify-center items-center">
+                    <div className="card2 bg-white shadow-md w-1/2 py-24 absolute left-8 flex flex-col justify-center items-center">
                         <div className="w-full h-full flex justify-center items-center">
                             <div className="w-5/6 h-5/6 flex flex-col items-center justify-evenly">
                                 {/* <h1 className="text-3xl text-gray-600">{testimonies[currentTestimony].title}</h1> */}
-                                <p className="text-center text-sm text-gray-500">{testimonies[currentTestimony].content}</p>
+                                <p className="text-center text-gray-500">{testimonies[currentTestimony].content}</p>
                             </div>
                             <NavButton extraClasses="absolute bottom-10 -translate-x-32 p-1" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
                             <NavButton extraClasses="absolute bottom-10 translate-x-32 p-1" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>
                         </div>
-                        <div className="bg-gray-300 rounded-sm transition ease-in-out shadow-sm w-48 h-16 translate-y-7 flex justify-center items-center hover:shadow-lg hover:bg-gray-400">
+                        <div className="bg-gray-300 rounded-sm absolute -bottom-2 transition ease-in-out shadow-sm w-48 h-16 translate-y-7 flex justify-center items-center hover:shadow-lg hover:bg-gray-400">
                             <Link to="/about/#testimonies" className="text-center text-2xl text-white">View all</Link>
                         </div>                        
                         <div className="rounded-sm bg-white w-1/2 h-16 absolute top-0 -translate-y-6 flex justify-center items-center shadow-md">
                             <h1 className="text-3xl text-gray-600">Testimonies</h1>
                         </div>
+                    </div>
                     </div>
                 </>
             ) : (
@@ -87,15 +89,15 @@ export const Testimony = ({ windowWidth }) => {
                     <div className="w-1/2 h-16 bg-white flex items-center justify-center z-10 shadow-md">
                         <h1 className="text-3xl text-gray-600">Testimonies</h1>
                     </div>
-                    <div className="card2 shadow-md bg-white w-10/12 h-3/5 -translate-y-6 flex justify-center items-center relative">
+                    <div className="card2 shadow-md bg-white w-10/12 py-24 -translate-y-6 flex justify-center items-center relative">
                         <div className="w-5/6 h-5/6 flex flex-col justify-center items-center">
-                            {/* <h1 className="text-center text-gray-500">{testimonies[currentTestimony].title}</h1> */}
-                            <p className="text-center text-gray-500" style={{fontSize: '13.5px'}}>{testimonies[currentTestimony].content}</p>
+                            <p className="text-center text-gray-500">{testimonies[currentTestimony].content}</p>
                         </div>
                         <NavButton extraClasses="-translate-x-20 absolute bottom-2" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/></NavButton>
                         <NavButton extraClasses="translate-x-20 absolute bottom-2" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/></NavButton>
                     </div>
-                    <div className="rounded-sm bg-gray-400 h-2/5 w-9/12 shadow-lg" style={backgroundStyle}></div>
+                    {/* <div className="rounded-sm bg-gray-400 h-2/5 w-9/12 shadow-lg" style={backgroundStyle}></div> */}
+                    <img src={testimonies[currentTestimony].src} alt="" />
                     <div className="bg-gray-300 rounded-sm transition ease-in-out shadow-sm w-32 h-14 translate-y-8 flex justify-center items-center hover:shadow-lg hover:bg-gray-400">
                         <Link to="/about/#testimonies" className="text-center text-2xl text-white">View all</Link>
                     </div>

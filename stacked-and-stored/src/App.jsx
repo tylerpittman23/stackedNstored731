@@ -24,7 +24,7 @@ function App() {
     {windowWidth > 800 ? 
     (
       <>
-      <div className="w-full flex flex-col justify-center">
+      <div className="w-full flex flex-col justify-center overflow-x-hidden">
         <Navbar windowWidth={windowWidth}/>
         <Outlet />
         <Footer windowWidth={windowWidth}/>
@@ -32,7 +32,7 @@ function App() {
       </>
     ) : (
       <>
-      <div className="w-full">
+      <div className="w-full overflow-x-hidden">
         <Navbar windowWidth={windowWidth}/>
         <Outlet />
         <Footer windowWidth={windowWidth}/>

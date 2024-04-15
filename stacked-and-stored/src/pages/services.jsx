@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { ServiceCard } from "../components/ServiceComponents";
-import { atticIMG, cabinetIMG, closetIMG, garageIMG, pantryIMG } from "../components/ServiceComponents/images";
+import { closetImgs } from '../components/ServiceComponents/images/closetsImgs/index.js';
+import { atticImgs } from "../components/ServiceComponents/images/atticsImgs/index.js";
+import { cabinetImgs } from "../components/ServiceComponents/images/cabinetsImgs/index.js";
+import { garageImgs } from "../components/ServiceComponents/images/garagesImgs/index.js";
+import { pantryImgs } from "../components/ServiceComponents/images/pantriesImgs/index.js";
 
 const leftCardStyles = {
     imgStyle: 'absolute left-10',
@@ -22,31 +26,31 @@ const serviceData = {
             id: 'closets',
             title: 'Closets',
             info: '',
-            src: closetIMG
+            imgs: [...closetImgs],
         },
         {
             id: 'attics',
             title: 'Attics',
             info: '',
-            src: atticIMG
+            imgs: [...atticImgs],
         },
         {
             id: 'garages',
             title: 'Garages',
             info: '',
-            src: garageIMG
+            imgs: [...garageImgs],
         },
         {
             id: 'pantries',
             title: 'Pantries',
             info: '',
-            src: pantryIMG
+            imgs: [...pantryImgs],
         },
         {
             id: 'cabinets',
             title: 'Cabinets',
             info: '',
-            src: cabinetIMG
+            imgs: [...cabinetImgs],
         }
     ]
 }

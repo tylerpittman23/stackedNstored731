@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectsComponents/projectCard";
-import { atticIMG, cabinet2IMG, cabinetIMG, closetIMG, garageIMG, pantryIMG } from '../components/ProjectsComponents/images'
+import { project1Imgs } from "../components/ProjectsComponents/images/project1Imgs";
+import { project2Imgs } from "../components/ProjectsComponents/images/project2Imgs";
+import { project3Imgs } from "../components/ProjectsComponents/images/project3Imgs";
+import { project4Imgs } from "../components/ProjectsComponents/images/project4imgs";
+import { project5Imgs } from "../components/ProjectsComponents/images/project5Imgs";
+import { project6Imgs } from "../components/ProjectsComponents/images/project6Imgs";
 
 const projectData = {
     header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. incididunt ut labore et dolore magna aliqua.',
@@ -9,32 +14,32 @@ const projectData = {
         {
             id: 'project1',
             title: 'Project 1',
-            src: atticIMG,
+            imgs: [...project1Imgs],
         },
         {
             id: 'project2',
             title: 'Project 2',
-            src: cabinet2IMG,
+            imgs: [...project2Imgs],
         },        
         {
             id: 'project3',
             title: 'Project 3',
-            src: closetIMG,
+            imgs: [...project3Imgs],
         },        
         {
             id: 'project4',
             title: 'Project 4',
-            src: cabinetIMG,
+            imgs: [...project4Imgs],
         },        
         {
             id: 'project5',
             title: 'Project 5',
-            src: garageIMG,
+            imgs: [...project5Imgs],
         },        
         {
             id: 'project6',
             title: 'Project 6',
-            src: pantryIMG,
+            imgs: [...project6Imgs],
         },
     ]
 }
@@ -51,7 +56,7 @@ const smallStyles = {
 
 export const Projects = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); 
-    const isLargeScreen = windowWidth > 800;
+    const isLargeScreen = windowWidth > 900;
     const location = useLocation();
     useEffect(() => {
         const scrollId = location.hash;
@@ -74,8 +79,8 @@ export const Projects = () => {
             {isLargeScreen ? 
             (
                 <>
-                <div className="w-1/2 h-36 mb-5 bg-white shadow-md flex justify-center items-center px-6">
-                    <p className="text-center">{projectData.header}</p>
+                <div className="w-1/2 mb-5 bg-white shadow-md flex justify-center items-center px-6 py-10">
+                    <p className="text-center text-lg">{projectData.header}</p>
                 </div>
                 <div className="w-full grid grid-cols-2">
                 {projectData.projects.map((project, index) => {
@@ -87,8 +92,8 @@ export const Projects = () => {
                 </>
             ) : (
                 <>
-                <div className="bg-white shadow-md rounded-sm w-5/6 h-44 mb-5 flex justify-center items-center p-5">
-                    <p className="text-center">{projectData.header}</p>
+                <div className="bg-white shadow-md rounded-sm w-5/6 mb-5 flex justify-center items-center py-10 px-5">
+                    <p className="text-center text-lg">{projectData.header}</p>
                 </div>
                 <div className="w-full grid grid-cols-1">
                     {projectData.projects.map((project, index) => {

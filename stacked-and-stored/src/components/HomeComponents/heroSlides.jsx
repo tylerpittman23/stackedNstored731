@@ -70,12 +70,11 @@ export const HeroSlides = ({ windowWidth }) => {
         transition: 'background-image 2.2s ease-in-out',
     };
 
-    const isWideScreen = windowWidth > 800;
-    const slideWidthClass = windowWidth > 1200 ? "w-3/5" : "w-8/12";
+    const isWideScreen = windowWidth > 900;
 
     return (
         <div className="h-screen bg-gray-100 flex flex-col justify-center items-center w-full pt-36">
-            <div className={`${isWideScreen ? slideWidthClass : "w-10/12"} bg-gray-400 rounded-sm h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
+            <div className={`bg-gray-400 rounded-sm w-4/5 h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
                 <div className="rounded-md bg-gray-300 absolute bottom-6 h-16 w-40 flex flex-col items-center justify-center transition ease-in-out shadow-sm hover:shadow-xl hover:bg-gray-400">
                     <Link to="/contact/" className="text-lg text-center text-white">Contact me for an estimate</Link>
                 </div>

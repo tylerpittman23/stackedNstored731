@@ -21,7 +21,7 @@ export const PostDisplay = ({ post }) => {
         </div>
         {showModal && (
                 <div id='modalOverlay' className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={handleOverlayClick}>
-                    <div className="bg-white p-5 rounded-lg shadow-lg w-11/12 max-w-sm relative">
+                    <div className="bg-white p-5 rounded-lg shadow-lg w-9/12 max-w-sm relative">
                         <h2 className="text-2xl mb-2">{post.title}</h2>
                         <img src={post.img} alt="" className="w-full my-3 rounded-md"/>
                         <p className="mb-4">{post.description}</p>

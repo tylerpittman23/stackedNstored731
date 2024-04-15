@@ -21,12 +21,12 @@ export const AboutValue = ({ windowWidth, data }) => {
             </>
         ) : (
             <>
-            <div className="bg-gray-200 w-full h-screen flex flex-col justify-evenly items-center relative">
+            <div className="bg-gray-200 w-full h-full flex flex-col justify-evenly items-center relative">
                 {data.map(value => {
                     return(
-                        <div key={value.id} className="h-1/3 w-11/12 flex flex-col justify-evenly items-center">
-                            <div className="card relative shadow-md bg-gray-100 w-full h-5/6 flex flex-col justify-evenly items-center px-5">
-                                <h1 className="text-3xl">{value.title}</h1>
+                        <div key={value.id} className="w-11/12 flex flex-col justify-evenly items-center my-10">
+                            <div className="card relative shadow-md bg-gray-100 w-full flex flex-col justify-evenly items-center px-5 py-10">
+                                <h1 className="text-3xl text-center mb-10">{value.title}</h1>
                                 <p className="text-center">{value.content}</p>
                             </div>
                         </div>

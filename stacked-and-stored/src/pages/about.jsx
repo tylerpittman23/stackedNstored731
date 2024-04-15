@@ -4,14 +4,14 @@ import { AboutHero, AboutValue, TestimonyCard } from "../components/AboutCompone
 
 const aboutData = {
     hero: {
-        header: 'Thanks for choosing Stacked and Stored 731',
+        header: 'Thanks for choosing Stacked & Stored 731',
         statement: 'Welcome to Stacked & Stored 731, the home of bespoke professional organizing solutions tailored to maximize every inch of your space. My mission is to transform your cluttered spaces into serene, functional environments where everything has a place. I appreciate your choice to explore my services and I’m excited to help you achieve a harmonized living or working area that reflects your personal style and needs. Thank you for visiting today; Ilook forward to collaborating with you to create an organized space that not only looks great but also enhances your day-to-day life.',
         intro: 'I come from a rich background of over a decade in teaching, where I honed my exceptional organizational skills and meticulous attention to detail. After years of shaping young minds, I redirected my passion for helping others into launching Stacked & Stored 731 just a few years ago. My approach to organization is deeply influenced by my educational experience, understanding that an orderly space promotes clarity and improves functionality. Driven by a desire to genuinely assist my clients, I am dedicated to transforming chaotic environments into beautifully organized spaces that reflect the unique needs and styles of each individual I work with.',
     },
     values : [
         {
             id: 1,
-            title: 'Efficiency and Functionality',
+            title: 'Efficiency & Functionality',
             content: 'I prioritize efficiency in my organizing approach, aiming to enhance both aesthetics and functionality. I design systems that streamline routines and maximize space, ensuring my clients experience less stress and more productivity in their daily lives.'
         },
         {
@@ -21,7 +21,7 @@ const aboutData = {
         },
         {
             id: 3,
-            title: 'Empathy and Support',
+            title: 'Empathy & Support',
             content: 'With a background in education, I bring empathy and support to my organizing projects. I understand the emotional challenges involved in decluttering and reorganizing, offering guidance and encouragement to make the process less overwhelming and more empowering for my clients.'
         }
     ],
@@ -70,8 +70,8 @@ export const About = () => {
         <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-44">
             <AboutHero windowWidth={windowWidth} data={aboutData.hero}/>
             <AboutValue windowWidth={windowWidth} data={aboutData.values}/>
-            <div id="testimonies" className="bg-white h-full w-full flex flex-wrap justify-center items-center relative pt-24">
-                <h1 className="bg-white shadow-md text-center text-4xl p-4 absolute top-6">Testimonies</h1>
+            <div id="testimonies" className="bg-white h-full w-full flex flex-wrap justify-center items-center relative pt-52">
+                <h1 className="bg-white shadow-lg text-center text-4xl px-5 py-10 mx-5 absolute top-6 font-bold">Here's what my clients have to say</h1>
             {aboutData.testimonies.map((testimony, index) => {
                 return (
                     <TestimonyCard key={index} testimony={testimony}/>

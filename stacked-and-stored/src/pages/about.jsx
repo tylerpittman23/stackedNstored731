@@ -5,24 +5,24 @@ import { AboutHero, AboutValue, TestimonyCard } from "../components/AboutCompone
 const aboutData = {
     hero: {
         header: 'Thanks for choosing Stacked and Stored 731',
-        statement: 'I am dedicated to helping you live freely in a decluttered space. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-        intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        statement: 'Welcome to Stacked & Stored 731, the home of bespoke professional organizing solutions tailored to maximize every inch of your space. My mission is to transform your cluttered spaces into serene, functional environments where everything has a place. I appreciate your choice to explore my services and I’m excited to help you achieve a harmonized living or working area that reflects your personal style and needs. Thank you for visiting today; Ilook forward to collaborating with you to create an organized space that not only looks great but also enhances your day-to-day life.',
+        intro: 'I come from a rich background of over a decade in teaching, where I honed my exceptional organizational skills and meticulous attention to detail. After years of shaping young minds, I redirected my passion for helping others into launching Stacked & Stored 731 just a few years ago. My approach to organization is deeply influenced by my educational experience, understanding that an orderly space promotes clarity and improves functionality. Driven by a desire to genuinely assist my clients, I am dedicated to transforming chaotic environments into beautifully organized spaces that reflect the unique needs and styles of each individual I work with.',
     },
     values : [
         {
             id: 1,
-            title: 'Value 1',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute.'
+            title: 'Efficiency and Functionality',
+            content: 'I prioritize efficiency in my organizing approach, aiming to enhance both aesthetics and functionality. I design systems that streamline routines and maximize space, ensuring my clients experience less stress and more productivity in their daily lives.'
         },
         {
             id: 2,
-            title: 'Value 2',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute. '
+            title: 'Personalized Solutions',
+            content: 'Recognizing that each client has unique needs, I offer tailored organizing solutions that reflect individual preferences and lifestyles. My commitment to customization guarantees that each project is as distinct and satisfying as the client themselves.'
         },
         {
             id: 3,
-            title: 'Value 3',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute. '
+            title: 'Empathy and Support',
+            content: 'With a background in education, I bring empathy and support to my organizing projects. I understand the emotional challenges involved in decluttering and reorganizing, offering guidance and encouragement to make the process less overwhelming and more empowering for my clients.'
         }
     ],
     testimonies: [

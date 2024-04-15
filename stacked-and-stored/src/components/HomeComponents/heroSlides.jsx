@@ -74,19 +74,19 @@ export const HeroSlides = ({ windowWidth }) => {
 
     return (
         <div className="h-screen bg-gray-100 flex flex-col justify-center items-center w-full pt-36">
-            <div className={`bg-gray-400 rounded-sm w-4/5 h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
+            <div className={`bg-gray-400 rounded-sm w-full max-w-screen-2xl h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
                 <div className="rounded-md bg-gray-300 absolute bottom-6 h-16 w-40 flex flex-col items-center justify-center transition ease-in-out shadow-sm hover:shadow-xl hover:bg-gray-400">
                     <Link to="/contact/" className="text-lg text-center text-white">Contact me for an estimate</Link>
                 </div>
                 <div 
-                    className={`${isWideScreen ? ('-left-16') : ('left-6')} absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    className={`bg-white left-6 absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
                     onClick={() => handleClick('left')}
                     aria-label="Previous Slide"
                 >
                     <FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/>
                 </div>
                 <div 
-                    className={`${isWideScreen ? ('-right-16') : ('right-6')} absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    className={`bg-white right-6 absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
                     onClick={() => handleClick('right')}
                     aria-label="Next Slide"
                 >

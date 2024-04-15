@@ -20,7 +20,7 @@ const rightCardStyles = {
     bg: 'bg-white'
 }
 const serviceData = {
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ',
+    header: 'Discover my professional organizing services tailored to meet your specific needs. From decluttering homes to optimizing workspaces, I provide customized solutions to transform your areas into efficient, tranquil spaces. Let me help you achieve a more organized and peaceful environment. Contact me today to begin your journey!',
     services: [
         {
             id: 'closets',
@@ -85,8 +85,8 @@ export const Services = () => {
         {type === 'large' ? 
         (
             <>
-                <div className="shadow-md h-48 w-3/5 bg-white flex justify-center items-center relative p-6">
-                    <p className="text-center text-xl bg-white">{serviceData.header}</p>
+                <div className="shadow-md w-3/5 bg-white flex justify-center items-center relative p-6">
+                    <p className="text-center text-2xl bg-white">{serviceData.header}</p>
                 </div>
                 {serviceData.services.map((service, index) => {
                     if (index % 2 === 0) {
@@ -97,8 +97,8 @@ export const Services = () => {
             </>
         ) : (
             <>
-            <div className="bg-white h-48 w-10/12 shadow-md p-6 flex justify-center items-center">
-                <p className="text-lg text-center">{serviceData.header}</p>
+            <div className="bg-white w-10/12 shadow-md p-6 flex justify-center items-center">
+                <p className="text-2xl text-center">{serviceData.header}</p>
             </div>
             {serviceData.services.map((service, index) => {
                 let bg = index % 2 === 0 ? '' : 'bg-white';

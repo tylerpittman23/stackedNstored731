@@ -66,7 +66,7 @@ export const Testimony = ({ windowWidth }) => {
                  <div className='h-screen flex items-center'>
                     <div className="bg-gray-100 w-2/3 h-52"></div>
                     <div className=" bg-gray-400 w-2/5 shadow-lg absolute h-3/5 right-6" style={backgroundStyle}></div>
-                    <div className="card2 bg-white shadow-md w-1/2 py-24 absolute left-8 flex flex-col justify-center items-center">
+                    <div className="bg-white shadow-md w-1/2 py-24 absolute left-8 flex flex-col justify-center items-center">
                         <div className="w-full h-full flex justify-center items-center">
                             <div className="w-5/6 h-5/6 flex flex-col items-center justify-evenly">
                                 {/* <h1 className="text-3xl text-gray-600">{testimonies[currentTestimony].title}</h1> */}
@@ -89,7 +89,7 @@ export const Testimony = ({ windowWidth }) => {
                     <div className="w-1/2 h-16 bg-white flex items-center justify-center z-10 shadow-md">
                         <h1 className="text-3xl text-gray-600">Testimonies</h1>
                     </div>
-                    <div className="card2 shadow-md bg-white w-10/12 py-24 -translate-y-6 flex justify-center items-center relative">
+                    <div className="shadow-md bg-white w-full py-24 -translate-y-6 flex justify-center items-center relative">
                         <div className="w-5/6 h-5/6 flex flex-col justify-center items-center">
                             <p className="text-center text-gray-500">{testimonies[currentTestimony].content}</p>
                         </div>

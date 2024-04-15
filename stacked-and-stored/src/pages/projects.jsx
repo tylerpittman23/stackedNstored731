@@ -9,7 +9,7 @@ import { project5Imgs } from "../components/ProjectsComponents/images/project5Im
 import { project6Imgs } from "../components/ProjectsComponents/images/project6Imgs";
 
 const projectData = {
-    header: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. incididunt ut labore et dolore magna aliqua.',
+    header: "Browse the gallery to see the transformative work I have achieved through Stacked & Stored 731. Each project showcases my commitment to creating spaces that are not only organized but also infused with personalized touches that reflect my clients' unique lifestyles. From streamlined home offices to serene living areas, my portfolio highlights the effectiveness and beauty of my organizing solutions. Let these successes inspire your own journey to a more organized space.",
     projects: [
         {
             id: 'project1',
@@ -79,7 +79,7 @@ export const Projects = () => {
             {isLargeScreen ? 
             (
                 <>
-                <div className="w-1/2 mb-5 bg-white shadow-md flex justify-center items-center px-6 py-10">
+                <div className="w-3/5 mb-5 bg-white shadow-md flex justify-center items-center px-6 py-10">
                     <p className="text-center text-lg">{projectData.header}</p>
                 </div>
                 <div className="w-full grid grid-cols-2">

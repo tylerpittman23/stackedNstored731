@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectsComponents/projectCard";
-import { project1Imgs } from "../components/ProjectsComponents/images/project1Imgs";
+import { project1Imgs } from '../components/ProjectsComponents/images/project1Imgs'
 import { project2Imgs } from "../components/ProjectsComponents/images/project2Imgs";
 import { project3Imgs } from "../components/ProjectsComponents/images/project3Imgs";
 import { project4Imgs } from "../components/ProjectsComponents/images/project4imgs";
@@ -75,11 +75,11 @@ export const Projects = () => {
       }, [windowWidth]);
     return (
         <>
-        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-52">
+        <div className="h-full flex flex-col justify-center items-center w-full pt-52 pb-24" style={{backgroundColor: '#ddeedf'}}>
             {isLargeScreen ? 
             (
                 <>
-                <div className="w-3/5 mb-5 bg-white shadow-md flex justify-center items-center px-6 py-10">
+                <div className="w-3/5 shadow-md flex justify-center items-center px-6 py-10" style={{backgroundColor: '#f2f9f1'}}>
                     <p className="text-center text-lg">{projectData.header}</p>
                 </div>
                 <div className="w-full grid grid-cols-2">
@@ -97,9 +97,8 @@ export const Projects = () => {
                 </div>
                 <div className="w-full grid grid-cols-1">
                     {projectData.projects.map((project, index) => {
-                        let bg = index % 2 === 0 ? '' : 'bg-white';
                     return (
-                        <ProjectCard id={project.id} key={index} project={project} extraClasses={{...smallStyles, bg}}/>
+                        <ProjectCard id={project.id} key={index} project={project} extraClasses={{...smallStyles}}/>
                     )
                     })}
                 </div>

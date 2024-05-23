@@ -47,17 +47,17 @@ const footerData = {
                     id: 3,
                     content: 'Garages',
                     to: '/services/#garages',
-                },                
-                {
-                    id: 4,
-                    content: 'Pantries',
-                    to: '/services/#pantries',
-                },                
+                }, 
                 {
                     id: 5,
-                    content: 'Cabinets',
-                    to: '/services/#cabinets',
-                },
+                    content: 'Kitchens',
+                    to: '/services/#kitchens',
+                },               
+                {
+                    id: 4,
+                    content: 'other',
+                    to: '/services/#other',
+                },                
             ]
         },
         projects: {
@@ -65,34 +65,39 @@ const footerData = {
             linksArr: [
                 {
                     id: 1,
-                    content: 'Project 1',
-                    to: '/projects/#project1',
-                },
-                {
-                    id: 2,
-                    content: 'Project 2',
-                    to: '/projects/#project2',
-                },
-                {
-                    id: 3,
-                    content: 'Project 3',
-                    to: '/projects/#project3',
-                },
-                {
-                    id: 4,
-                    content: 'Project 4',
-                    to: '/projects/#project4',
-                },
-                {
-                    id: 5,
-                    content: 'Project 5',
-                    to: '/projects/#project5',
-                },
-                {
-                    id: 6,
-                    content: 'Project 6',
-                    to: '/projects/#project6',
-                },
+                    content: 'Gallery',
+                    to: '/projects'
+                }
+                // {
+                //     id: 1,
+                //     content: 'Project 1',
+                //     to: '/projects/#project1',
+                // },
+                // {
+                //     id: 2,
+                //     content: 'Project 2',
+                //     to: '/projects/#project2',
+                // },
+                // {
+                //     id: 3,
+                //     content: 'Project 3',
+                //     to: '/projects/#project3',
+                // },
+                // {
+                //     id: 4,
+                //     content: 'Project 4',
+                //     to: '/projects/#project4',
+                // },
+                // {
+                //     id: 5,
+                //     content: 'Project 5',
+                //     to: '/projects/#project5',
+                // },
+                // {
+                //     id: 6,
+                //     content: 'Project 6',
+                //     to: '/projects/#project6',
+                // },
             ],
         },
         contact: {
@@ -113,10 +118,10 @@ export const Footer = ({ windowWidth }) => {
     const isWideScreen = windowWidth >= 800;
 
     return (
-        <div className="bg-gray-100 w-full flex flex-col items-center pt-16">
+        <div className="w-full flex flex-col items-center pt-16" style={{ backgroundColor: '#ddeedf'}}>
             <div>
                 <h1 className="text-3xl text-gray-500 text-center px-4">
-                    follow me <a className='text-gray-400' href="https://www.instagram.com/stacked_stored_731/reels/" target="blank">@stacked_stored_731</a> on Instagram</h1>
+                    find me <a className='text-gray-400' href="https://www.instagram.com/stacked_stored_731/reels/" target="blank">@stacked_stored_731</a> on Instagram</h1>
             </div>
             <div className="w-full p-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -125,7 +130,7 @@ export const Footer = ({ windowWidth }) => {
                     ))}
                 </div>
             </div>
-            <div className={`${isWideScreen ? 'justify-evenly items-center' : 'flex-col justify-center items-start'} w-full mt-10 flex p-4`}>
+            <div className={`${isWideScreen ? 'justify-evenly items-start' : 'flex-col justify-center items-start'} w-full mt-10 flex p-4`}>
                 <FooterLink links={footerData.links.services}/>
                 <FooterLink links={footerData.links.projects} />
                 <FooterLink links={footerData.links.contact} />

@@ -5,8 +5,8 @@ import { AboutHero, AboutValue, TestimonyCard } from "../components/AboutCompone
 const aboutData = {
     hero: {
         header: 'Thanks for choosing Stacked & Stored 731',
-        statement: 'Welcome to Stacked & Stored 731, the home of bespoke professional organizing solutions tailored to maximize every inch of your space. My mission is to transform your cluttered spaces into serene, functional environments where everything has a place. I appreciate your choice to explore my services and I’m excited to help you achieve a harmonized living or working area that reflects your personal style and needs. Thank you for visiting today; Ilook forward to collaborating with you to create an organized space that not only looks great but also enhances your day-to-day life.',
-        intro: 'I come from a rich background of over a decade in teaching, where I honed my exceptional organizational skills and meticulous attention to detail. After years of shaping young minds, I redirected my passion for helping others into launching Stacked & Stored 731 just a few years ago. My approach to organization is deeply influenced by my educational experience, understanding that an orderly space promotes clarity and improves functionality. Driven by a desire to genuinely assist my clients, I am dedicated to transforming chaotic environments into beautifully organized spaces that reflect the unique needs and styles of each individual I work with.',
+        statement: 'Welcome to Stacked & Stored 731, your destination for professional organizing solutions. My mission is to transform cluttered spaces into serene, functional environments tailored to your style and needs. Thank you for exploring my services; I look forward to collaborating with you to create an organized space that enhances your daily life.',
+        intro: "With over a decade in teaching, I honed exceptional organizational skills and attention to detail. A few years ago, I redirected my passion for helping others into launching Stacked & Stored 731. My educational experience influences my approach, understanding that an orderly space promotes clarity and functionality. I'm dedicated to transforming chaotic environments into beautifully organized spaces that reflect each client's unique needs and style.",
     },
     values : [
         {
@@ -67,11 +67,11 @@ export const About = () => {
       }, [windowWidth]);
     return (
         <>
-        <div className="h-full flex flex-col bg-gray-100 justify-center items-center w-full pt-44">
+        <div className="h-full flex flex-col justify-center items-center w-full pt-44" style={{backgroundColor: '#ddeedf'}}>
             <AboutHero windowWidth={windowWidth} data={aboutData.hero}/>
             <AboutValue windowWidth={windowWidth} data={aboutData.values}/>
-            <div id="testimonies" className="bg-white h-full w-full flex flex-wrap justify-center items-center relative pt-52">
-                <h1 className="bg-white shadow-lg text-center text-4xl px-5 py-10 mx-5 absolute top-6 font-bold">Here's what my clients have to say</h1>
+            <div id="testimonies" className="bg-white h-full w-full flex flex-wrap justify-center items-center relative pt-52" style={{backgroundColor: '#ddeedf'}}>
+                <h1 className="bg-white shadow-lg text-center text-4xl px-5 py-10 mx-5 absolute top-6 font-bold" style={{color:'#5c715e', backgroundColor: '#f2f9f1'}}>Here's what my clients have to say</h1>
             {aboutData.testimonies.map((testimony, index) => {
                 return (
                     <TestimonyCard key={index} testimony={testimony}/>

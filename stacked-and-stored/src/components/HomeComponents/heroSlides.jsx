@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { imgONE, imgTWO, imgTHREE, imgFOUR, imgFIVE, imgSIX, imgSEVEN } from "./images";
+import { heroImgONE, heroImgTWO, heroImgTHREE, heroImgFOUR, heroImgFIVE, heroImgSIX, heroImgSEVEN } from "./images/heroImgs";
 
 export const HeroSlides = ({ windowWidth }) => {
 
@@ -10,37 +10,37 @@ export const HeroSlides = ({ windowWidth }) => {
         {
             id: 'imgONE',
             name: 'img name',
-            src: imgONE
+            src: heroImgONE
         },
         {
             id: 'imgTWO',
             name: 'img name',
-            src: imgTWO
+            src: heroImgTWO
         },
         {
             id: 'imgTHREE',
             name: 'img name',
-            src: imgTHREE
+            src: heroImgTHREE
         },
         {
             id: 'imgFOUR',
             name: 'img name',
-            src: imgFOUR
+            src: heroImgFOUR
         },
         {
             id: 'imgFIVE',
             name: 'img name',
-            src: imgFIVE
+            src: heroImgFIVE
         },
         {
             id: 'imgSIX',
             name: 'img name',
-            src: imgSIX
+            src: heroImgSIX
         },
         {
             id: 'imgSEVEN',
             name: 'img name',
-            src: imgSEVEN
+            src: heroImgSEVEN
         }
     ];
 
@@ -67,30 +67,29 @@ export const HeroSlides = ({ windowWidth }) => {
         backgroundImage: `url(${heroImages[currentImgIndex].src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        transition: 'background-image 2.2s ease-in-out',
     };
 
-    const isWideScreen = windowWidth > 900;
-
     return (
-        <div className="h-screen bg-gray-100 flex flex-col justify-center items-center w-full pt-36">
-            <div className={`bg-gray-400 rounded-sm w-full max-w-screen-2xl h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
-                <div className="rounded-md bg-gray-300 absolute bottom-6 p-3 w-64 flex flex-col items-center justify-center transition ease-in-out shadow-sm hover:shadow-xl hover:bg-gray-400">
+        <div className="h-screen flex flex-col justify-center items-center w-full pt-36">
+            <div className={`bg-gray-400 rounded-sm w-full max-w-screen-lg h-5/6 flex justify-center items-center px-2 relative shadow-2xl`} style={backgroundStyle}>
+                <div className="rounded-md absolute bottom-6 p-3 w-64 flex flex-col items-center justify-center transition ease-in-out shadow-sm hover:shadow-xl" style={{backgroundColor: '#5c715e'}}>
                     <Link to="/contact/" className="text-lg text-center text-white">Contact me for an estimate</Link>
                 </div>
                 <div 
-                    className={`bg-white left-6 absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    className={`left-6 absolute rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    style={{backgroundColor: '#f2f9f1'}}
                     onClick={() => handleClick('left')}
                     aria-label="Previous Slide"
                 >
-                    <FontAwesomeIcon icon={faChevronLeft} style={{color: '#777'}}/>
+                    <FontAwesomeIcon icon={faChevronLeft} style={{color: '#5c715e'}}/>
                 </div>
                 <div 
-                    className={`bg-white right-6 absolute border-1 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    className={`right-6 absolute rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer`}
+                    style={{backgroundColor: '#f2f9f1'}}
                     onClick={() => handleClick('right')}
                     aria-label="Next Slide"
                 >
-                    <FontAwesomeIcon icon={faChevronRight} style={{color: '#777'}}/>
+                    <FontAwesomeIcon icon={faChevronRight} style={{color: '#5c715e'}}/>
                 </div>
             </div>
             <div className="w-48 flex justify-evenly items-center mt-5">

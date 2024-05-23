@@ -20,7 +20,7 @@ export const Home = () => {
 
     return (
         <> 
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center" style={{backgroundColor: '#ddeedf'}}>
             <HeroSlides windowWidth={windowWidth} />
             <Welcome windowWidth={windowWidth}/>
             <Testimony windowWidth={windowWidth}/>

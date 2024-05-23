@@ -78,7 +78,7 @@ export const Services = () => {
         (
             <>
                 <div className="shadow-md w-3/5 bg-white flex justify-center items-center relative p-6" style={{backgroundColor: '#f2f9f1'}}>
-                    <p className="text-center text-2xl">{serviceData.header}</p>
+                    <p className="text-center text-2xl" style={{color: '#5c715e'}}>{serviceData.header}</p>
                 </div>
                 {serviceData.services.map((service, index) => {
                     if (index % 2 === 0) {
@@ -90,7 +90,7 @@ export const Services = () => {
         ) : (
             <>
             <div className="w-10/12 shadow-md p-6 flex justify-center items-center" style={{backgroundColor: '#f2f9f1'}}>
-                <p className="text-2xl text-center">{serviceData.header}</p>
+                <p className="text-2xl text-center" style={{color: '#5c715e'}}>{serviceData.header}</p>
             </div>
             {serviceData.services.map((service, index) => {
                 return <ServiceCard key={service.id} type={type} serviceData={service}/>
@@ -98,14 +98,16 @@ export const Services = () => {
             </>
         )}
         <div className="h-full w-full flex flex justify-center items-center" style={{backgroundColor: '#f2f9f1'}}>
-            <div className="w-full max-w-screen-lg p-10" >
+            <div className="w-full max-w-screen-lg p-10 flex flex-col justify-center items-center" >
                 <p 
                     className="text-center text-lg"
+                    style={{color: '#5c715e'}}
                     >
                         While my website highlights a range of services I offer, my expertise goes beyond what's listed. 
                         I pride myself on my flexibility and creativity in tackling any organizational challenge you may face. 
                         If you have a unique project or specific need, don't hesitate to reach out. I'm here to help you find the perfect solution for your space.
                </p>
+               <button className="mt-8 p-2 rounded-sm text-lg" style={{backgroundColor: '#5c715e', color:'#f2f9f1'}}>Contact me</button>
             </div>
         </div>
 

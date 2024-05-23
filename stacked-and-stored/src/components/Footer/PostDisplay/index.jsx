@@ -17,7 +17,7 @@ export const PostDisplay = ({ post }) => {
         <>
         <div className="flex justify-center items-center flex-col mb-5 mt-20 relative" onClick={() => toggleModal(!showModal)}>
             <h1 className="text-center text-3xl mb-5 absolute -top-16" style={{color: '#5c715e'}}>{post.title}</h1>
-            <img src={post.img} alt=""className="w-2/3 my-5 rounded-md"/>
+            <img src={post.img} alt=""className="w-2/3 my-5 rounded-md cursor-pointer"/>
         </div>
         {showModal && (
                 <div id='modalOverlay' className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={handleOverlayClick}>

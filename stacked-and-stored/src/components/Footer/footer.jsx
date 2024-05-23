@@ -120,8 +120,8 @@ export const Footer = ({ windowWidth }) => {
     return (
         <div className="w-full flex flex-col items-center pt-16" style={{ backgroundColor: '#ddeedf'}}>
             <div>
-                <h1 className="text-3xl text-gray-500 text-center px-4">
-                    find me <a className='text-gray-400' href="https://www.instagram.com/stacked_stored_731/reels/" target="blank">@stacked_stored_731</a> on Instagram</h1>
+                <h1 className="text-3xl text-gray-500 text-center px-4" style={{color: '#5c715e'}}>
+                    find me <a href="https://www.instagram.com/stacked_stored_731/reels/" target="blank">@stacked_stored_731</a> on Instagram</h1>
             </div>
             <div className="w-full p-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

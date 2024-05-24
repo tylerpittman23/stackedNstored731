@@ -3,7 +3,7 @@ import heroImg from './images/welcomeProfileImg.png';
 
 export const AboutHero = ({ windowWidth, data }) => {
 
-    const isLargeScreen = windowWidth > 1000;
+    const isLargeScreen = windowWidth > 1200;
 
     const backgroundStyle = {
         backgroundSize: 'cover',

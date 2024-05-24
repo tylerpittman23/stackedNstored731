@@ -72,7 +72,7 @@ export const Testimony = ({ windowWidth }) => {
                         <div className="w-full h-full flex justify-center items-center">
                             <div className="w-5/6 h-5/6 flex flex-col items-center justify-evenly">
                                 {/* <h1 className="text-3xl text-gray-600">{testimonies[currentTestimony].title}</h1> */}
-                                <p className="text-center text-gray-500">{testimonies[currentTestimony].content}</p>
+                                <p className="text-center text-gray-500" style={{color: '#5c715e'}}>{testimonies[currentTestimony].content}</p>
                             </div>
                             <NavButton extraClasses="absolute bottom-10 -translate-x-32 p-1" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#5c715e'}}/></NavButton>
                             <NavButton extraClasses="absolute bottom-10 translate-x-32 p-1" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#5c715e'}}/></NavButton>
@@ -81,7 +81,7 @@ export const Testimony = ({ windowWidth }) => {
                             <Link to="/about/#testimonies" className="text-center text-2xl text-white">View all</Link>
                         </div>                        
                         <div className="rounded-sm w-1/2 h-16 absolute top-0 -translate-y-6 flex justify-center items-center shadow-md" style={{backgroundColor: '#f2f9f1'}}>
-                            <h1 className="text-3xl text-gray-600">Testimonies</h1>
+                            <h1 className="text-3xl text-gray-600" style={{color: '#5c715e'}}>Testimonies</h1>
                         </div>
                     </div>
                     </div>
@@ -89,11 +89,11 @@ export const Testimony = ({ windowWidth }) => {
             ) : (
                 <div className="mt-5 h-full w-full flex flex-col justify-center items-center">
                     <div className="w-1/2 h-16 bg-white flex items-center justify-center z-10 shadow-md" style={{backgroundColor: '#f2f9f1'}}>
-                        <h1 className="text-3xl text-gray-600">Testimonies</h1>
+                        <h1 className="text-3xl text-gray-600" style={{color: '#5c715e'}}>Testimonies</h1>
                     </div>
                     <div className="shadow-md bg-white w-full py-24 -translate-y-6 flex justify-center items-center relative" style={{backgroundColor: '#f2f9f1'}}>
                         <div className="w-5/6 h-5/6 flex flex-col justify-center items-center">
-                            <p className="text-center text-gray-500">{testimonies[currentTestimony].content}</p>
+                            <p className="text-center text-gray-500" style={{color: '#5c715e'}}>{testimonies[currentTestimony].content}</p>
                         </div>
                         <NavButton extraClasses="-translate-x-20 absolute bottom-2" onClick={() => handleClick('left')}><FontAwesomeIcon icon={faChevronLeft} style={{color: '#5c715e'}}/></NavButton>
                         <NavButton extraClasses="translate-x-20 absolute bottom-2" onClick={() => handleClick('right')}><FontAwesomeIcon icon={faChevronRight} style={{color: '#5c715e'}}/></NavButton>
